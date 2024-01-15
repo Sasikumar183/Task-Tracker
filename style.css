@@ -1,0 +1,139 @@
+*{
+    padding:0;
+    margin:0;
+    font-family:calibri;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    padding:25px;
+    background-image: url(images/bgtodo.jpg);
+}
+
+.content{
+    max-width: 545px;
+    margin: 100px auto;
+    padding: 40px 30px 70px;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+.content:hover{
+    box-shadow: 10px 15px  5px black;
+   
+}
+
+.content h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.row{
+ display: inline-flex;
+ justify-content: space-between ;   
+ background-color: aquamarine;
+ border-radius: 10px;
+ border-bottom: 15px;
+}
+
+.content input{
+    padding:10px;
+    padding-left: 40px;
+    padding-right: 45px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+}
+.content input:hover{
+    border-color: yellow;
+}
+
+
+#add{
+    position: absolute;
+    cursor: pointer;
+    background-color: black;
+    color:white;
+    font-size:20px;
+    padding:10px;
+    padding-bottom: 8px;
+    padding-left:30px;
+    padding-right: 30px;
+    border-radius: 10px;
+}
+#add:hover{
+    background-color: white;
+    color:black;
+    font-weight: 20px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative; 
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 16px;
+}
+ul li.done::before {
+    background-image: url(images/checked.png);
+}
+
+#btnid{
+    position: absolute;
+    left:340px; 
+    background-color:rgb(77, 238, 77);
+    color:black;
+    border:none;
+    cursor: pointer;
+    font-size: 15px;
+    padding:7px;
+    border-radius: 6px;
+}
+#rmid{
+    position: absolute;
+    left:390px; 
+    background-color:rgb(218, 25, 18);
+    color:black;
+    cursor: pointer;
+    border:none;
+    font-size: 15px;
+    padding:7px;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 767px) {
+    #btnid {
+    position: absolute;
+    left:160px; 
+    }
+    #rmid{
+    position: absolute;
+    left:220px; 
+}
+    #add{
+        font-size: 15px;
+        padding:5px;
+    }
+    .content input{
+        padding:8px;
+        padding-left: 40px;
+        padding-right: 45px;
+        font-size: 15px;
+        background-color: transparent;
+    }
+}
+
